@@ -9,13 +9,13 @@ export default {
             bgColor: '#f5f5f5',
             textColor: '#333',
             themes: ['dark', 'light', 'neon'],
-            currentThemeIndex: 0  //but then itll keep adding right...so need loop back
+            currentThemeIndex: 0  
         }
     },
     
     methods: {
         // Add code here
-            cycleTheme (){
+            cycleTheme (){ //first click will be light (1), neon (2), then dark (0)
             this.currentThemeIndex = (this.currentThemeIndex + 1) % this.themes.length;
 
             const theme = this.themes[this.currentThemeIndex];
