@@ -13,5 +13,8 @@
 <template>
 
     <!-- add code here -->
+    <div id="display">
+      <img v-bind:src="myImg" :width = "width" :height = "height"></img>
+    </div>
    
 </template>

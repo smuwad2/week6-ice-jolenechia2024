@@ -2,22 +2,36 @@
     export default { 
 
        // add code here
-
+       data() {
+        return {
+            login: "username"
+            }
+       }
     }
+
 </script>
 
 <template>
     <h1>Please select your login option</h1>
     <!-- Add/modify code in the following to have a dropdown list 
         which lets the user to select either to login with username or email -->
-    <select>
-        <option selected>Username login</option>
-        <option>Email login</option>
+
+    <select v-model = "login">
+        <option selected value = "username">Username login</option>
+        <option value = "email">Email login</option>
     </select>
     
-    <div>
+    <div v-if = "login === 'username'"> 
         <label>Username</label>
         <input placeholder="Enter your username">
     </div>
+
+    <div v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+    </div>
+
+    
+
 </template>
 
